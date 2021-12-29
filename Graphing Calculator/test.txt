@@ -1,0 +1,35 @@
+//hide commands
+
+const y_zoom = 38
+const bounds = 10
+const aspectRatio = 1080 / (1920 / 2.08)
+
+set graph range xmin:0-bounds ymin:0-bounds xmax:bounds ymax:bounds
+set graph zoom xzoom:(aspectRatio*y_zoom) yzoom:y_zoom
+open graph
+
+function f(x) = sin(x)
+function g(x) = tan(x)
+function h(x) = 2-1/x
+function k(x) = x^3 * e^(0-x)
+
+var n = 100
+const s = 2
+
+function summation(n) = (n + n ^ s) / s
+
+graph f(x)
+graph g(x)
+
+timeout 10
+clear graph
+
+graph h(x)
+
+timeout 10
+clear graph
+
+graph k(x)
+graph summation(n)
+
+pause

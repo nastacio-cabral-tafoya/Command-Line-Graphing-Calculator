@@ -1,0 +1,8 @@
+//Hiding all commands passed from the script.
+hide commands
+
+//Performing Calculation.
+1010|2 + 10 + A|16
+
+//Waiting for user to close the terminal.
+pause

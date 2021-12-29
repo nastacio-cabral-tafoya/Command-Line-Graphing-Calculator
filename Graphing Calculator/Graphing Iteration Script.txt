@@ -1,0 +1,23 @@
+//Variable Declarations
+var scale = (1 / 5)
+var zoom = 115
+var graphMin = (0 - 4) //In order to make a variable or a number negative, it has to be subtracted from zero.
+var graphMax = 4
+
+//Function Declarations
+function squaredFunction(x) = (x ^ 2)
+function sineFunction(x) = sin(x)
+
+//Graph Settings
+set graph range xmin:graphMin ymin:graphMin xmax:graphMax ymax:graphMax
+set graph scale xscale:scale yscale:scale
+set graph zoom xzoom:zoom yzoom:(zoom*0.85) //Spaces cannot be present when setting a graph value.
+
+//Opens the Turtle Window and sets up the grid lines.
+open graph
+
+//Graphs each of the functions.
+graph squaredFunction(x)
+graph sineFunction(x)
+
+pause
